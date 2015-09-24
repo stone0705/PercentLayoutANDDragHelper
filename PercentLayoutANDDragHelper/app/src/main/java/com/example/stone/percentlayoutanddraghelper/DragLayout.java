@@ -29,7 +29,7 @@ public class DragLayout extends LinearLayout {
                 final int leftBound = getPaddingLeft();
                 final int rightBound = getWidth() - child.getWidth() - leftBound;
                 final int newLeft = Math.min(Math.max(left, leftBound), rightBound);
-                return left;
+                return newLeft;
             }
 
             @Override
@@ -38,7 +38,7 @@ public class DragLayout extends LinearLayout {
                 final int topBound = getPaddingTop();
                 final int botBound = getHeight() - child.getHeight() - topBound;
                 final int newTop = Math.min(Math.max(top,topBound),botBound);
-                return top;
+                return newTop;
             }
             @Override
             public int getViewHorizontalDragRange(View child)
